@@ -1,0 +1,46 @@
+package citytracksaware.core.sensors.control.datamanagers;
+
+import android.content.*;
+import android.database.*;
+import android.util.*;
+
+import com.aware.providers.*;
+import com.google.gson.*;
+
+import org.json.*;
+
+import citytracksaware.core.sensors.model.*;
+import citytracksaware.core.util.*;
+
+/**
+ * Created by Elton Soares on 10/29/2017.
+ */
+
+public class NetworkSensorDataManager extends SensorDataManager {
+
+    public NetworkSensorDataManager(Context context, UploadManager uploadManager, Gson gson) {
+        super(context, uploadManager, gson);
+        this.contentURI = Network_Provider.Network_Data.CONTENT_URI;
+    }
+
+    @Override
+    public void uploadDataToServer() throws JSONException {
+
+        Cursor sensor_data = getLocalDatabaseCursor();
+
+        Log.i("citytracks-aware", "Processing and sending to upload queue...");
+        NetworkSensorData sensorData;
+        while (sensor_data.moveToNext()) {
+            sensorData = new NetworkSensorData();
+            sensorData.setTimestamp(sensor_data.getDouble(sensor_data.getColumnIndex("timestamp")));
+            sensorData.setDeviceId(deviceId);
+            sensorData.setNetworkType(sensor_data.getInt(sensor_data.getColumnIndex("network_type")));
+            sensorData.setNetworkSubType(sensor_data.getString(sensor_data.getColumnIndex("network_subtype")));
+            sensorData.setNetworkState(sensor_data.getInt(sensor_data.getColumnIndex("network_state")));
+            JSONObject json = new JSONObject(gson.toJson(sensorData));
+            uploadManager.uploadToServer(json, "network-readings");
+        }
+
+        clearLocalDatabase();
+    }
+}

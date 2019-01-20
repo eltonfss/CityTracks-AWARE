@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:paddingBottom="@dimen/activity_vertical_margin"
+                  android:paddingLeft="@dimen/activity_horizontal_margin"
+                  android:paddingRight="@dimen/activity_horizontal_margin"
+                  android:paddingTop="@dimen/activity_vertical_margin"
+                  android:weightSum="1">
+
+        <TextView
+            android:id="@+id/id_dispositivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/iniciar_atualizacoes_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="startTrip"
+                android:text="@string/iniciar_atualizacoes" />
+
+            <Button
+                android:id="@+id/parar_atualizacoes_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:gravity="center"
+                android:onClick="finishTrip"
+                android:text="@string/parar_atualizacoes" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cancelar_viagem_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="cancelTrip"
+                android:text="@string/cancelar_viagem"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/enviar_dados_coletados"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="uploadDataToServer"
+                android:text="@string/enviar_dados_coletados"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selecionar_proposito_da_viagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:textSize="@dimen/default_text_size"/>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selecione_proposito_viagem"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/proposito_de_viagem_casa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTripPurpose"
+                android:text="@string/proposito_de_viagem_casa"/>
+
+            <Button
+                android:id="@+id/proposito_de_viagem_trabalho"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTripPurpose"
+                android:text="@string/proposito_de_viagem_trabalho" />
+
+            <Button
+                android:id="@+id/proposito_de_viagem_educacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTripPurpose"
+                android:text="@string/proposito_de_viagem_educacao"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/proposito_de_viagem_compras"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTripPurpose"
+                android:text="@string/proposito_de_viagem_compras"/>
+
+            <Button
+                android:id="@+id/proposito_de_viagem_lazer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTripPurpose"
+                android:text="@string/proposito_de_viagem_lazer" />
+
+            <Button
+                android:id="@+id/proposito_de_viagem_outro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTripPurpose"
+                android:text="@string/proposito_de_viagem_outro"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/proposito_de_viagem_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/proposito_da_viagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=""/>
+
+            <Button
+                android:id="@+id/proposito_da_viagem_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTripPurposeOther"
+                android:text="@string/button_ok"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/selecionar_modo_de_transporte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:textSize="@dimen/default_text_size"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selecione_modo_transporte"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/modo_de_transporte_parado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_parado"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_caminhando"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_caminhando"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_bicicleta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_bicicleta"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/modo_de_transporte_moto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_moto"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_carro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_carro"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_van"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_van"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/modo_de_transporte_microonibus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_microonibus"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_onibuscomum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_onibuscomum"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_onibusexecutivo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_onibusexecutivo"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/modo_de_transporte_trem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_trem"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_metro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_metro"/>
+
+
+            <Button
+                android:id="@+id/modo_de_transporte_barca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_barca"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/modo_de_transporte_brt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_brt"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_vlt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_vlt"/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_outro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelMode"
+                android:text="@string/modo_de_transporte_outro"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/modo_de_transporte_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/modo_de_transporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=""/>
+
+            <Button
+                android:id="@+id/modo_de_transporte_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="setTravelModeOther"
+                android:text="@string/button_ok"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/botao_servidor"
+            android:onClick="setServerAddress"
+            android:layout_weight="0.19"/>
+
+        <LinearLayout
+            android:id="@+id/endereco_servidor_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/endereco_servidor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text=""/>
+
+            <Button
+                android:id="@+id/endereco_servidor_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="saveServerAddress"
+                android:text="@string/button_ok"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

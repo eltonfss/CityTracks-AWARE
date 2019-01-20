@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/context_card"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:layout_marginTop="1dp"
+    android:fitsSystemWindows="false"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ambient_noise_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_ambient_noise" />
+
+    <TextView
+        android:id="@+id/decibels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 dB"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/ambient_noise"
+        android:layout_toRightOf="@+id/ambient_noise_icon"
+        android:layout_toEndOf="@+id/ambient_noise_icon" />
+
+    <TextView
+        android:id="@+id/ambient_noise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingRight="5dp"
+        android:text="Silent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/black" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/ambient_chart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:layout_below="@+id/ambient_noise_icon"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

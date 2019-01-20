@@ -1,0 +1,2 @@
+include ':citytracksaware-client', ':citytracksaware-core', ':com.aware.plugin.google.activity_recognition'
+project(':com.aware.plugin.google.activity_recognition').projectDir = new File('com.aware.plugin.google.activity_recognition')

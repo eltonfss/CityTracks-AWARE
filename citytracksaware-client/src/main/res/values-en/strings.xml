@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CityTracks-AWARE</string>
+
+    <string name="selecionar">Select</string>
+    <string name="modo">Mode</string>
+    <string name="proposito">Purpose</string>
+    <string name="id_dispositivo">Device ID</string>
+
+    <string name="mensagem_selecione">Please, make sure the travel mode being used, the trip purpose and the server URL are informed.</string>
+    <string name="mensagem_processando1">Processing trip data...</string>
+    <string name="mensagem_cancelar">Trip canceled!</string>
+    <string name="mensagem_processando2">Trip data saved in device storage!</string>
+    <string name="mudar_proposito">Trip purpose switched to</string>
+    <string name="mudar_modo">Travel mode switched to</string>
+    <string name="enviando_dados">Uploading data to server ... this might take a while (Do not close the app)</string>
+    <string name="erro_enviando_dados">It was not possible to upload the data to server! Check your internet connection.</string>
+
+    <string name="iniciar_atualizacoes">Start Trip</string>
+    <string name="parar_atualizacoes">Finish Trip</string>
+
+    <string name="selecione_modo_transporte">Select the travel mode:</string>
+    <string name="modo_de_transporte_parado">STILL</string>
+    <string name="modo_de_transporte_caminhando">ON FOOT</string>
+    <string name="modo_de_transporte_bicicleta">BIKE</string>
+    <string name="modo_de_transporte_moto">MOTORBIKE</string>
+    <string name="modo_de_transporte_carro">CAR</string>
+    <string name="modo_de_transporte_van">VAN</string>
+    <string name="modo_de_transporte_microonibus">THREE WHEELER</string>
+    <string name="modo_de_transporte_onibuscomum">SHUTTLE BUS</string>
+    <string name="modo_de_transporte_onibusexecutivo">CHARTER BUS</string>
+    <string name="modo_de_transporte_trem">TRAIN</string>
+    <string name="modo_de_transporte_metro">SUBWAY</string>
+    <string name="modo_de_transporte_barca">FERRY</string>
+    <string name="modo_de_transporte_brt">BRT</string>
+    <string name="modo_de_transporte_vlt">LIGHT RAIL</string>
+    <string name="modo_de_transporte_outro">OTHER</string>
+
+    <string name="enviar_dados_coletados">Upload data to server</string>
+    <string name="cancelar_viagem">Cancel current trip</string>
+
+    <string name="selecione_proposito_viagem">Select the trip purpose:</string>
+    <string name="proposito_de_viagem_casa">HOME</string>
+    <string name="proposito_de_viagem_trabalho">WORK</string>
+    <string name="proposito_de_viagem_educacao">EDUCATION</string>
+    <string name="proposito_de_viagem_compras">SHOPPING</string>
+    <string name="proposito_de_viagem_lazer">LEISURE</string>
+    <string name="proposito_de_viagem_outro">OTHER</string>
+
+    <string name="endereco_servidor">http://citytracks.intelliurb.org/citytracks-aware/</string>
+
+
+    <string name="botao_servidor">Edit server address</string>
+
+    <string name="button_ok">SAVE</string>
+</resources>

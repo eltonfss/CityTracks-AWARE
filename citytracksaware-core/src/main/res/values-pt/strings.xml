@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CityTracks-AWARE</string>
+    <string name="upload_dados">Enviando dados para o servidor...</string>
+    <string name="erro_upload_dados">Erro ao enviar dados dos sensores para o servidor! Verifique sua conexão e tente novamente.</string>
+    <string name="sucesso_upload_dados">Dados dos sensores enviados com sucesso!</string>
+</resources>

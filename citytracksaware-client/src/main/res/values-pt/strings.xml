@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CityTracks-AWARE</string>
+
+    <string name="selecionar">Selecionar</string>
+    <string name="modo">Modo</string>
+    <string name="proposito">Propósito</string>
+    <string name="id_dispositivo">ID do Dispositivo</string>
+
+    <string name="mensagem_selecione">Por favor, selecione o modo de transporte utilizado, o propósito da viagem e informe a URL do servidor de coleta!</string>
+    <string name="mensagem_processando1">Processando dados da viagem...</string>
+    <string name="mensagem_processando2">Viagem salva no dispositivo!</string>
+    <string name="mensagem_cancelar">Viagem cancelada!</string>
+    <string name="mudar_proposito">Propósito de viagem alterado para</string>
+    <string name="mudar_modo">Modo de transporte alterado para</string>
+    <string name="enviando_dados">Enviado dados para o servidor ... isto pode levar alguns minutos (Não feche a aplicação)</string>
+    <string name="erro_enviando_dados">Não foi possível enviar os dados para o servidor! Certifique-se de que sua conexão com a internet está ativa.</string>
+
+    <string name="iniciar_atualizacoes">Iniciar Viagem</string>
+    <string name="parar_atualizacoes">Finalizar Viagem</string>
+
+    <string name="selecione_modo_transporte">Selecione o Modo de Transporte:</string>
+    <string name="modo_de_transporte_parado">PARADO</string>
+    <string name="modo_de_transporte_caminhando">A PÉ</string>
+    <string name="modo_de_transporte_bicicleta">BICICLETA</string>
+    <string name="modo_de_transporte_moto">MOTO</string>
+    <string name="modo_de_transporte_carro">CARRO</string>
+    <string name="modo_de_transporte_van">VAN</string>
+    <string name="modo_de_transporte_microonibus">MICRO ONIBUS</string>
+    <string name="modo_de_transporte_onibuscomum">ONIBUS COMUM</string>
+    <string name="modo_de_transporte_onibusexecutivo">ONIBUS EXECUTIVO</string>
+    <string name="modo_de_transporte_trem">TREM</string>
+    <string name="modo_de_transporte_metro">METRO</string>
+    <string name="modo_de_transporte_barca">BARCA</string>
+    <string name="modo_de_transporte_brt">BRT</string>
+    <string name="modo_de_transporte_vlt">VLT</string>
+    <string name="modo_de_transporte_outro">OUTRO</string>
+
+    <string name="enviar_dados_coletados">Enviar Dados Coletados</string>
+    <string name="cancelar_viagem">Cancelar/Descartar Viagem</string>
+
+    <string name="selecione_proposito_viagem">Selecione o Propósito da Viagem:</string>
+    <string name="proposito_de_viagem_casa">CASA</string>
+    <string name="proposito_de_viagem_trabalho">TRABALHO</string>
+    <string name="proposito_de_viagem_educacao">EDUCAÇÃO</string>
+    <string name="proposito_de_viagem_compras">COMPRAS</string>
+    <string name="proposito_de_viagem_lazer">LAZER</string>
+    <string name="proposito_de_viagem_outro">OUTRO</string>
+
+    <string name="endereco_servidor">http://citytracks.intelliurb.org/citytracks-aware/</string>
+
+
+    <string name="botao_servidor">Alterar Endereço do Servidor</string>
+
+    <string name="button_ok">SALVAR</string>
+</resources>
